@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: solid 1px #aaa;
+  background-color: #eee;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: solid 1px #aaa;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+}
+
+nav a[aria-current='page'] {
+  color: #000;
+  background-color: #d4d4d4;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#cuadrado {
+  background: #F1948A;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  
+}
+
+#triangulo {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid lightblue;
+  animation-duration: 2s;
+  animation-name: parpadeo;
+  animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo{
+from {border-bottom-color: lightblue;}
+to {border-bottom-color: #555}
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Altura igual al 100% de la ventana del navegador */
+}
+
+/* Estilos para el cuadrado */
+.cuadrado {
+  width: 200px; /* Ancho del cuadrado */
+  height: 200px; /* Altura del cuadrado */
+  background-color: #FF5733; /* Color de fondo del cuadrado */
+  animation-duration: 4s;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+from  {
+  margin-left: 100%;
+  width: 300%;
+}
+to{
+  margin-left: 0%;
+  width: 100%;
+}
+}
+
+.ml14 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml14 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml14 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml14 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
